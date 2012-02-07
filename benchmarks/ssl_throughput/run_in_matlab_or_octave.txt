@@ -1,0 +1,12 @@
+connections = load('data.connections.txt')
+bytes = load('data.bytes.txt')
+
+subplot(2, 1, 1); plot(connections, 'r+', connections)
+title('connections')
+ylabel('number of connections')
+xlabel('timeline: two entries every minute')
+
+subplot(2, 1, 2); plot(bytes, 'r+', bytes)
+title('bytes')
+
+% could be incomplete,..

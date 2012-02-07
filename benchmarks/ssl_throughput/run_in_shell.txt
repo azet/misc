@@ -1,0 +1,4 @@
+localhost% while [ 1 ]; do; openssl s_time -connect google.com:443 -www / -new -ssl3 | grep "bytes read"; echo; done > data.txt
+localhost% grep ', bytes' data.txt | awk '{print $1}' > data.connections.txt
+localhost% awk '{print $10}' data.txt | tr -d '[:alpha:]' | sed '/^$/d' > data.bytes.txt
+
