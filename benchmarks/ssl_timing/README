@@ -1,2 +1,4 @@
 -> http://www.openssl.org/docs/apps/s_time.html
 -> http://www.gnu.org/software/octave/
+
+currently only graphs bytes & connections.
