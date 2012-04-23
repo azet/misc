@@ -29,7 +29,6 @@ case $# in
 							echo "\nDONE - EXTRACTED: $dir\n" 
 						fi
 					) &
-					wait
 					finished=1
 				fi
 			done 
@@ -39,6 +38,7 @@ case $# in
 				echo -n "extract directories or abort? y/ANY: " ; read usr_input
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1 ; continue
 			else
+				wait
 				echo "\noperation complete.\n"
 				break
 			fi
