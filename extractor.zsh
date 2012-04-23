@@ -60,7 +60,7 @@ case $# in
 		echo "   containing '%' or '.part'"
 		echo
 		echo " options:"
-		echo "    -  argv 1 = working directory e.g. '/media/USBStick' (files will be copied here)"
+		echo "    -  argv 1 = working directory e.g. '/media/USBStick' (files will be extracted here)"
 		echo "    -  argv 2 = directory egrep, e.g. 'backup' matches 'DIR00101011_backup'"
 		echo " e.g.:  \`zsh extractor.zsh /media/AES '(docs|cvs)'\`\n\n"
 		exit -1
