@@ -24,8 +24,8 @@ case $# in
 					fi; echo -n '.'
 				else
 					(						
-						echo "\nJOB - extract PID: $!" ; echo "JOB - extract DIR: $dir\n" 
-						if for i in `find $dir/ | egrep -e '(rar|r[0-99]|zip)'`; do unrar -y x $i &> /dev/null; done; then
+						echo "\nJOB - extract PID: $!" ; echo "JOB - extract DIR: $dir\n"
+						if for i in `find $dir/ | egrep -e '(rar|r[0-99]|zip)'`; do; echo -n . && unrar -y x $i &> /dev/null; done; then
 							echo "\nDONE - EXTRACTED: $dir\n" 
 						fi
 					) &
@@ -39,7 +39,7 @@ case $# in
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1 ; continue
 			else
 				wait
-				echo "\noperation complete.\n"
+				echo "\n>> operation complete. <<\n"
 				break
 			fi
 		done		
