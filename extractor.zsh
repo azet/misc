@@ -47,8 +47,7 @@ case $# in
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1
 				echo "\n_READ_:\n  this operation might spawn a lot of processes (=CPU usage).\n  Ctrl-C to abort.\n"
 				echo "..will start in eight seconds.." ; sleep 8
-				for val in $ack_dir[@]; do $dirs+=$val; done ; 
-				continue
+				for val in $ack_dir[@]; do $dirs+=$val; done ; continue
 			else
 				wait $pids[-1] ; sleep 5
 				echo "\n    >>  operation complete.  <<\n"
