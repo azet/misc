@@ -13,7 +13,7 @@ throw() {
 	echo "\nexception: $@ \nexiting."
 	if [ -n "$pids" ]; then
 		echo -n "killing as many coroutines as possible: "
-		for p in $pids; do pkill $p; echo -n ¤; done ; echo "\n"
+		for p in $pids; do pkill $p; echo -n ¤; done ; echo "\n" ; sleep 5
 	fi
 	local return=anon
 	function { exit -1 }
@@ -42,7 +42,6 @@ case $# in
 			if [ ! $finished ]; then
 				echo "\n\nCOMPLETE:   $#ack_dir[*]" ; echo "INCOMPLETE:  $#nack_dir[*]"
 				if [ $#ack_dir[*] -eq 0 ]; then throw 'nothing to extract..'; fi
-				echo "\n!!! extract subroutines will be spawned, this can cause system load !!!\n"
 				echo -n "extract directories or abort? y/ANY: " ; read usr_input
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1
 				echo "\n_READ_:\n  this operation might spawn a lot of processes (=CPU usage).\n  Ctrl-C to abort.\n"
@@ -50,8 +49,7 @@ case $# in
 				for val in $ack_dir[@]; do $dirs+=$val; done ; continue
 			else
 				wait $pids[-1] ; sleep 5
-				echo "\n    >>  operation complete.  <<\n"
-				break
+				echo "\n    >>  operation complete.  <<\n" ; break
 			fi
 		done		
 	;;
