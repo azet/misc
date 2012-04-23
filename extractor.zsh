@@ -1,9 +1,12 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 # 
 # azet @ Mon Apr 23 00:49:38 CEST 2012
 # MIT LICENSE (http://www.opensource.org/licenses/MIT)
 #
-# info - see: default case
+# usage info - see: default case
+# forks coroutines for extraction, has (cheap) signal,
+# exception and PID handling. depends: unrar(1)
+#
 # debug:
 #set -x
 throw() {
