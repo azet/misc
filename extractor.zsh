@@ -41,14 +41,16 @@ case $# in
 			done 
 			if [ ! $finished ]; then
 				echo "\n\nCOMPLETE:   $#ack_dir[*]" ; echo "INCOMPLETE:  $#nack_dir[*]"
-				if [ $#ack_dir[*] -eq 0 ]; then echo "\nnothing to extract.. exiting."; exit 0; fi
+				if [ $#ack_dir[*] -eq 0 ]; then throw 'nothing to extract..'; fi
 				echo "\n!!! extract subroutines will be spawned, this can cause system load !!!\n"
 				echo -n "extract directories or abort? y/ANY: " ; read usr_input
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1
-				for val in $ack_dir[@]; do $dirs+=$val; done
+				echo "\n_READ_:\n  this operation might spawn a lot of processes (=CPU usage).\n  Ctrl-C to abort.\n"
+				echo "..will start in eight seconds.." ; sleep 8
+				for val in $ack_dir[@]; do $dirs+=$val; done ; 
 				continue
 			else
-				wait $pids[-1]
+				wait $pids[-1] ; sleep 5
 				echo "\n    >>  operation complete.  <<\n"
 				break
 			fi
