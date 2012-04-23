@@ -49,7 +49,7 @@ case $# in
 				for val in $ack_dir[@]; do $dirs+=$val; done ; continue
 			else
 				wait $pids[-1] ; sleep 5
-				echo "\n    >>  operation complete.  <<\n" ; break
+				echo "\n\n    >>  operation complete.  <<\n" ; break
 			fi
 		done		
 	;;
