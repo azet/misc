@@ -3,10 +3,9 @@
 # azet @ Mon Apr 23 00:49:38 CEST 2012
 # MIT LICENSE (http://www.opensource.org/licenses/MIT)
 #
-# usage info - see: default case
+# usage info - see: default case below
 # forks coroutines for extraction, has (cheap) signal,
 # exception and PID handling. depends: unrar(1)
-#
 # debug:
 #set -x
 throw() {
@@ -32,7 +31,8 @@ case $# in
 					fi; echo -n '.'
 				else
 					(	echo "\nJOB - extract PID: $!" ; echo "JOB - extract DIR: $dir\n"
-						if for i in `find $dir/ | egrep -e '(rar|r[0-99]|zip)'`; do; echo -n . && unrar -y x $i &> /dev/null; done; then
+						if for i in `find $dir/ | egrep -e '(rar|r[0-99]|zip)'` 
+						do; echo -n . && unrar -y x $i $dir_path &> /dev/null; done; then
 							echo "\nDONE - EXTRACTED: $dir to $dir_path\n" 
 						fi
 					) & pids+=($!)
