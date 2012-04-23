@@ -10,7 +10,7 @@
 # debug:
 #set -x
 throw() {
-	echo "\nerror: $@ \n\nextractor.zsh: exiting."
+	echo "\nexception: $@ \nexiting."
 	if [ -n "$pids" ]; then
 		echo -n "killing as many coroutines as possible: "
 		for p in $pids; do pkill $p; echo -n ¤; done ; echo "\n"
@@ -41,6 +41,7 @@ case $# in
 			done 
 			if [ ! $finished ]; then
 				echo "\n\nCOMPLETE:   $#ack_dir[*]" ; echo "INCOMPLETE:  $#nack_dir[*]"
+				if [ $#ack_dir[*] -eq 0 ]; then echo "\nnothing to extract.. exiting."; exit 0; fi
 				echo "\n!!! extract subroutines will be spawned, this can cause system load !!!\n"
 				echo -n "extract directories or abort? y/ANY: " ; read usr_input
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1
