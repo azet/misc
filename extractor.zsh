@@ -39,7 +39,7 @@ case $# in
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1 ; continue
 			else
 				wait
-				echo "\n>> operation complete. <<\n"
+				echo "\n    >>  operation complete.  <<\n"
 				break
 			fi
 		done		
