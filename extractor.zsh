@@ -59,8 +59,7 @@ case $# in
 		echo "extractor.zsh:"
 		echo " ~ extracts backups in .rar and .zip files and copies into a specified dir."
 		echo " ~ uses regular expression patterns with egrep also checks if there is a file/dir"
-		echo "   containing '%' or '.part'"
-		echo
+		echo "   containing '%' or '.part'\n"
 		echo " options:"
 		echo "    -  argv 1 = working directory - e.g. '/media/USBStick' (files will be extracted here)"
 		echo "    -  argv 2 = directory egrep - e.g. 'backup' matches directory 'DIR00101011_backup'"
