@@ -13,7 +13,7 @@ throw() {
 	echo "\nexception: $@ \nexiting."
 	if [ -n "$pids" ]; then
 		echo -n "killing as many coroutines as possible: "
-		for p in $pids; do pkill $p; echo -n ¤; done ; echo "\n" ; sleep 5
+		for p in $pids; do pkill $p; echo -n ¤; done ; echo "\n" ; sleep 4
 	fi
 	local return=anon
 	function { exit -1 }
@@ -25,7 +25,7 @@ case $# in
 		dirs=(`find $dir_path -maxdepth 1 -type d | egrep -e $dir_egrepcmd`)
 		while :; do
 			if [ ! $extract ]; then echo -n "\nscanning: "; else; echo -n "\nextracting: "; fi 
-			for dir i in $dirs; do
+			for dir in $dirs[@]; do
 				if [ ! $extract ]; then
 					cd $dir; if ! incomplete=anon; function { test `ls | egrep '(%|part)' | wc -l` -lt 1 || nack_dir+=($dir) }; then
 						ack_dir+=($dir)	
@@ -45,11 +45,13 @@ case $# in
 				echo -n "extract directories or abort? y/ANY: " ; read usr_input
 				[ $usr_input = "y" ] || throw 'abort.' ; extract=1
 				echo "\n_READ_:\n  this operation might spawn a lot of processes (=CPU usage).\n  Ctrl-C to abort.\n"
-				echo "..will start in eight seconds.." ; sleep 8
-				for val in $ack_dir[@]; do $dirs+=$val; done ; continue
+				echo "..will start in six seconds.." ; sleep 6
+				unset dirs; for val in $ack_dir[@]; do dirs+=($val); done
+				continue
 			else
-				wait $pids[-1] ; sleep 5
-				echo "\n\n    >>  operation complete.  <<\n" ; break
+				wait $pids[-1] ; sleep 4
+				echo "\n\n    >>  operation complete.  <<\n"
+				break
 			fi
 		done		
 	;;
