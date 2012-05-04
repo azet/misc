@@ -33,7 +33,7 @@ case $# in
 					(	echo "\nJOB - extract PID: $!" ; echo "JOB - extract DIR: $dir\n"
 						if for i in `find $dir/ | egrep -e '(rar|r[0-99]|zip)'` 
 						do; echo -n . && unrar -y x $i $dir_path &> /dev/null; done; then
-							echo "\nDONE - EXTRACTED: $dir to $dir_path\n" 
+							echo "\nDONE - EXTRACTED: $idr to $dir_path\n" 
 						fi
 					) & pids+=($!)
 					finished=1
