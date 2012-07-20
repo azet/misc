@@ -1,0 +1,822 @@
+version=11;
+class Mission
+{
+	addOns[]=
+	{
+		"cacharacters2",
+		"CAWheeled",
+		"utes",
+		"CAAir2_Pchela1T",
+		"cawater2_smallboat_1",
+		"cawater2_fishing_boat"
+	};
+	addOnsAuto[]=
+	{
+		"cacharacters2",
+		"CAAir2_Pchela1T",
+		"CAWheeled",
+		"cawater2_smallboat_1",
+		"cawater2_fishing_boat",
+		"utes"
+	};
+	randomSeed=15399337;
+	class Intel
+	{
+		startWeather=0.059968174;
+		forecastWeather=0.76116991;
+		year=2012;
+		month=10;
+		day=11;
+		hour=2;
+		minute=20;
+	};
+	class Groups
+	{
+		items=11;
+		class Item0
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=19;
+				class Item0
+				{
+					position[]={3018.1309,37.332031,4094.1069};
+					azimut=55;
+					id=0;
+					side="EAST";
+					vehicle="RUS_Soldier_TL";
+					rank="LIEUTENANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item1
+				{
+					position[]={3015.7559,37.663879,4088.7813};
+					azimut=55;
+					id=1;
+					side="EAST";
+					vehicle="RUS_Soldier_GL";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item2
+				{
+					position[]={3016.9031,37.6786,4087.1436};
+					azimut=55;
+					id=2;
+					side="EAST";
+					vehicle="RUS_Soldier_Marksman";
+					player="PLAYER COMMANDER";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item3
+				{
+					position[]={3018.0503,37.693344,4085.5049};
+					azimut=55;
+					id=3;
+					side="EAST";
+					vehicle="RUS_Soldier3";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.95958561;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item4
+				{
+					position[]={3019.1973,37.708073,4083.8667};
+					azimut=55;
+					id=4;
+					side="EAST";
+					vehicle="RUS_Soldier1";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.95319325;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item5
+				{
+					position[]={3020.3445,37.719357,4082.2285};
+					azimut=55;
+					id=5;
+					side="EAST";
+					vehicle="RUS_Soldier2";
+					rank="CORPORAL";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item6
+				{
+					position[]={2990.5608,38.033237,4085.2231};
+					azimut=55;
+					id=6;
+					side="EAST";
+					vehicle="RUS_Soldier_TL";
+					leader=1;
+					rank="MAJOR";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item7
+				{
+					position[]={2988.1858,38.283894,4079.8979};
+					azimut=55;
+					id=7;
+					side="EAST";
+					vehicle="RUS_Soldier_GL";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.76781118;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item8
+				{
+					position[]={2989.333,38.328144,4078.2593};
+					azimut=55;
+					id=8;
+					side="EAST";
+					vehicle="RUS_Soldier_Marksman";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item9
+				{
+					position[]={2990.4802,38.415611,4076.6211};
+					azimut=55;
+					id=9;
+					side="EAST";
+					vehicle="RUS_Soldier3";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item10
+				{
+					position[]={2991.6272,38.563061,4074.9829};
+					azimut=55;
+					id=10;
+					side="EAST";
+					vehicle="RUS_Soldier1";
+					rank="CORPORAL";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item11
+				{
+					position[]={2992.7744,38.710545,4073.3442};
+					azimut=55;
+					id=11;
+					side="EAST";
+					vehicle="RUS_Soldier2";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item12
+				{
+					position[]={3268.8491,44.940098,3960.675};
+					azimut=55;
+					special="FLY";
+					id=36;
+					side="EAST";
+					vehicle="Pchela1T";
+					rank="CORPORAL";
+					skill=1;
+				};
+				class Item13
+				{
+					position[]={2948.5935,35.141258,4091.9629};
+					azimut=55;
+					id=37;
+					side="EAST";
+					vehicle="RUS_Soldier_TL";
+					rank="LIEUTENANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item14
+				{
+					position[]={2946.2185,35.578312,4086.6372};
+					azimut=55;
+					id=38;
+					side="EAST";
+					vehicle="RUS_Soldier_GL";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item15
+				{
+					position[]={2947.3657,35.907639,4084.999};
+					azimut=55;
+					id=39;
+					side="EAST";
+					vehicle="RUS_Soldier_Marksman";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item16
+				{
+					position[]={2948.5129,36.237038,4083.3604};
+					azimut=55;
+					id=40;
+					side="EAST";
+					vehicle="RUS_Soldier3";
+					rank="SERGEANT";
+					skill=0.95958561;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item17
+				{
+					position[]={2949.6599,36.566303,4081.7227};
+					azimut=55;
+					id=41;
+					side="EAST";
+					vehicle="RUS_Soldier1";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.95319325;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+				class Item18
+				{
+					position[]={2950.8071,36.847271,4080.084};
+					azimut=55;
+					id=42;
+					side="EAST";
+					vehicle="RUS_Soldier2";
+					rank="CORPORAL";
+					skill=1;
+					init="    this setpos [getpos this select 0, getpos this select 1,(getpos this select 2) +1000];  this flyinheight 5000;  this setvelocity [0,0,0];  [this] exec ""ca\air2\halo\data\Scripts\HALO_init.sqs"";";
+				};
+			};
+			class Waypoints
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3214.3157,29.284121,4311.8955};
+					type="GETOUT";
+					combatMode="BLUE";
+					formation="FILE";
+					speed="FULL";
+					combat="STEALTH";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={3336.5176,19.190315,4388.728};
+					placement=80;
+					completitionRadius=200;
+					idStatic=1011;
+					idObject=-1918723085;
+					type="SAD";
+					combatMode="RED";
+					formation="VEE";
+					speed="FULL";
+					combat="COMBAT";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={3358.3579,19.810574,4392.6157};
+					idStatic=1427;
+					idObject=-1918722669;
+					housePos=0;
+					type="DESTROY";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={3420.1003,17,4396.9438};
+					placement=20;
+					completitionRadius=100;
+					type="SENTRY";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={3397.1719,31.140781,4540.2656};
+					combatMode="YELLOW";
+					formation="FILE";
+					speed="FULL";
+					combat="SAFE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={3240.0767,4.0498161,4613.334};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={3249.8494,0.54407239,4647.896};
+					id=45;
+					type="GETIN";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={1075.7606,-17.134489,4865.124};
+					combatMode="GREEN";
+					speed="FULL";
+					combat="STEALTH";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={171.43918,-74.35836,4367.082};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3323.3113,14.604263,4408.9648};
+					azimut=45;
+					id=12;
+					side="WEST";
+					vehicle="CDF_Soldier_GL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item1
+				{
+					position[]={3316.24,14.270009,4408.9648};
+					azimut=45;
+					id=13;
+					side="WEST";
+					vehicle="UAZ_CDF";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={3321.897,14.949165,4403.3081};
+					azimut=45;
+					id=14;
+					side="WEST";
+					vehicle="CDF_Soldier_RPG";
+					skill=0.2;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3339.8477,15.985129,4406.7114};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3427.1948,16.971945,4404.1353};
+					azimut=255;
+					id=15;
+					side="WEST";
+					vehicle="CDF_Soldier_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item1
+				{
+					position[]={3433.3186,17,4400.5996};
+					azimut=255;
+					id=16;
+					side="WEST";
+					vehicle="UAZ_AGS30_CDF";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={3440.0801,17,4402.4111};
+					azimut=255;
+					id=17;
+					side="WEST";
+					vehicle="UAZ_AGS30_CDF";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={3431.248,17,4408.3271};
+					azimut=255;
+					id=18;
+					side="WEST";
+					vehicle="CDF_Soldier_MG";
+					skill=0.2;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3398.9319,16.89999,4401.75};
+					type="HOLD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={3498.1179,17.626089,4399.4951};
+					azimut=270;
+					id=19;
+					side="WEST";
+					vehicle="CDF_Soldier_TL";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.59999996;
+				};
+				class Item1
+				{
+					position[]={3480.7568,17.230616,4383.5742};
+					azimut=270;
+					id=20;
+					side="WEST";
+					vehicle="CDF_Soldier_AR";
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item2
+				{
+					position[]={3503.1179,17.814577,4404.4951};
+					azimut=270;
+					id=21;
+					side="WEST";
+					vehicle="CDF_Soldier_MG";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={3503.1179,17.75458,4406.4951};
+					azimut=270;
+					id=22;
+					side="WEST";
+					vehicle="CDF_Soldier_MG";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item4
+				{
+					position[]={3480.1836,16.803673,4410.7881};
+					azimut=270;
+					id=23;
+					side="WEST";
+					vehicle="CDF_Soldier_RPG";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item5
+				{
+					position[]={3452.0889,16.979109,4388.1343};
+					azimut=270;
+					id=24;
+					side="WEST";
+					vehicle="CDF_Soldier_RPG";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item6
+				{
+					position[]={3475.0232,16.842705,4425.6826};
+					azimut=270;
+					id=25;
+					side="WEST";
+					vehicle="CDF_Soldier_GL";
+					skill=0.2;
+				};
+				class Item7
+				{
+					position[]={3503.1179,17.559532,4414.4951};
+					azimut=270;
+					id=26;
+					side="WEST";
+					vehicle="CDF_Soldier_Marksman";
+					skill=0.2;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3449.4463,17,4405.8096};
+					placement=40;
+					completitionRadius=200;
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item4
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={3362.0049,16.914957,4411.4966};
+					azimut=270;
+					id=27;
+					side="GUER";
+					vehicle="GUE_Worker2";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item1
+				{
+					position[]={3377.8293,16.89999,4373.0024};
+					azimut=270;
+					id=28;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={3420.6768,16.918449,4371.8457};
+					azimut=270;
+					id=29;
+					side="GUER";
+					vehicle="GUE_Villager3";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={3386.3987,18.225924,4432.9297};
+					azimut=270;
+					id=30;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					skill=0.2;
+				};
+				class Item4
+				{
+					position[]={3395.8704,16.94129,4382.6113};
+					azimut=270;
+					id=31;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					skill=0.2;
+				};
+				class Item5
+				{
+					position[]={3445.9338,17,4426.5562};
+					azimut=270;
+					id=32;
+					side="GUER";
+					vehicle="GUE_Villager4";
+					skill=0.2;
+				};
+			};
+		};
+		class Item5
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3443.228,16.967716,4384.0234};
+					azimut=270;
+					id=33;
+					side="GUER";
+					vehicle="GUE_Villager3";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+			};
+		};
+		class Item6
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3298.9006,13.885969,4419.2036};
+					azimut=270;
+					id=34;
+					side="GUER";
+					vehicle="GUE_Villager3";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+			};
+		};
+		class Item7
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3338.1392,15.362611,4415.3984};
+					azimut=270;
+					id=35;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+			};
+		};
+		class Item8
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3238.9097,0.56999028,4634.8335};
+					id=43;
+					side="CIV";
+					vehicle="smallboat_2";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item9
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3242.7568,0.6808182,4638.8945};
+					id=44;
+					side="CIV";
+					vehicle="Smallboat_1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item10
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3249.8494,0.54407239,4647.896};
+					id=45;
+					side="CIV";
+					vehicle="Fishing_Boat";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"utes"
+	};
+	addOnsAuto[]=
+	{
+		"utes"
+	};
+	randomSeed=14246257;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"utes"
+	};
+	addOnsAuto[]=
+	{
+		"utes"
+	};
+	randomSeed=227036;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"utes"
+	};
+	addOnsAuto[]=
+	{
+		"utes"
+	};
+	randomSeed=1072799;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=14;
+		minute=20;
+	};
+};
