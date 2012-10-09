@@ -1,0 +1,4 @@
+DEPENDS:
+- rkhunter
+- portsnap
+- portaudit
