@@ -1,8 +1,4 @@
-## directories: ##
-- cgi: various cgi scripts (outdated)
-- benchmarks: obvious
-- ArmA2_missions: ArmA2 + OA - various scripted missions (http://www.arma2.com/)
-- freebsd_periodic: crontab/periodic config. for basic freebsd/package security
+note:
+i wont keep this readme updated any longer, its useless anyway.
 
-## files: ##
-- extractor.zsh: unrar wrapper with coroutines for extraction, e.g. for many backup dirs.
+if you want to know whats happening in the directories, look at the commit messsages.
