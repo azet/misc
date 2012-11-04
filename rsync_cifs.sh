@@ -6,4 +6,4 @@
 bkpdir="smb_azet/home_bkp"
 user="azet"
 
-rsync -av --progress --exclude /home/$user/.gvfs /home/$user /media/$bkpdir  || ( wall "attention: backup failed!" ; exit 1 )
+rsync -av --progress --bwlimit=8500 --exclude /home/$user/.gvfs /home/$user /media/$bkpdir  || ( echo "attention: backup failed!" | wall ; exit 1 )
