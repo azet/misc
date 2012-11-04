@@ -5,5 +5,6 @@
 # or any other user
 bkpdir="smb_azet/home_bkp"
 user="azet"
+bwKB="7500" #backup bandwidth in KB
 
-rsync -av --progress --bwlimit=8500 --exclude /home/$user/.gvfs /home/$user /media/$bkpdir  || ( echo "attention: backup failed!" | wall ; exit 1 )
+rsync -av --progress --bwlimit=$bwkB --exclude /home/$user/.gvfs /home/$user /media/$bkpdir  || ( echo "attention: backup failed!" | wall ; exit 1 )
